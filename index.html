@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Library | Search & Download</title>
+    <title>E-Library for Students (SRCAS)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f9;
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
             text-align: center;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         h2 {
             margin-top: 20px;
-            color: #333;
+            color: #0056b3;
         }
-        #searchBox {
+        #searchBox, #categorySelect {
             width: 80%;
             max-width: 500px;
             padding: 12px;
-            margin: 20px 0;
-            border: 2px solid #007BFF;
+            margin: 10px 0;
+            border: 2px solid #6c757d;
             border-radius: 25px;
             font-size: 16px;
             outline: none;
             text-align: center;
+            background: #ffffff;
+            color: #333;
         }
         #bookList {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 0;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 900px;
+            padding: 20px;
         }
         .bookItem {
-            background: white;
+            background: #f8f1e4;
             width: 80%;
             max-width: 400px;
             padding: 15px;
@@ -46,6 +46,7 @@
             box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
             text-align: center;
+            color: #333;
         }
         .bookItem:hover {
             transform: scale(1.05);
@@ -55,19 +56,19 @@
             font-size: 18px;
             font-weight: bold;
             margin: 10px 0;
-            color: #333;
+            color: #0056b3;
         }
         .downloadBtn {
             text-decoration: none;
             padding: 8px 15px;
-            background: #007BFF;
-            color: white;
+            background: #ffc107;
+            color: #333;
             border-radius: 5px;
             display: inline-block;
             transition: background 0.3s;
         }
         .downloadBtn:hover {
-            background: #0056b3;
+            background: #ffca28;
         }
         .bookImage {
             width: 100px;
@@ -75,34 +76,52 @@
             object-fit: cover;
             margin-bottom: 10px;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
         }
     </style>
 </head>
 <body>
-    <h2>📚 E-Library | Find Your Books</h2>
-    <input type="text" id="searchBox" placeholder="Search for a book..." onkeyup="searchBooks()">
+    <h2>📚 E-Library for Students (SRCAS)</h2>
+    <input type="text" id="searchBox" placeholder="Search by title, author, or edition..." onkeyup="searchBooks()">
+    <select id="categorySelect" onchange="searchBooks()">
+        <option value="">All Categories</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Cloud Computing">Cloud Computing</option>
+    </select>
     <div id="bookList"></div>
-
+    
     <script>
         const books = [
             { 
                 title: "Introduction to Python", 
+                author: "John Doe",
+                edition: "1st",
+                category: "Python",
                 url: "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming_-_WEB.pdf",
                 image: "https://m.media-amazon.com/images/I/71wvDBsPRSL.jpg"
             },
             { 
                 title: "Basics of Python", 
+                author: "Jane Smith",
+                edition: "2nd",
+                category: "Python",
                 url: "https://www.freebookcentre.net/programming-books-download/gotoweb.php?id=11228",
                 image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1576707604i/49444404.jpg"
             },
             { 
                 title: "Java", 
+                author: "Mark Johnson",
+                edition: "3rd",
+                category: "Java",
                 url: "https://www.iitk.ac.in/esc101/share/downloads/javanotes5.pdf",
                 image: "https://m.media-amazon.com/images/I/91xUz2EuYdL._AC_UF1000,1000_QL80_.jpg"
             },
             { 
                 title: "Cloud Computing", 
+                author: "Emily Davis",
+                edition: "1st",
+                category: "Cloud Computing",
                 url: "https://www.kth.se/social/files/554fa451f276544829be2e5e/9-cloud-computing.pdf",
                 image: "https://www.store.bookrivers.com/wp-content/uploads/2022/07/Front-13.jpg"
             }
@@ -115,17 +134,28 @@
                 const bookItem = document.createElement("div");
                 bookItem.className = "bookItem";
                 bookItem.innerHTML = `<img src="${book.image}" class="bookImage">
-                                      <div class="bookTitle">${book.title}</div> 
+                                      <div class="bookTitle">${book.title}</div>
+                                      <div>Author: ${book.author}</div>
+                                      <div>Edition: ${book.edition}</div>
+                                      <div>Category: ${book.category}</div>
                                       <a href="${book.url}" target="_blank" class="downloadBtn">Download</a>`;
                 bookList.appendChild(bookItem);
             });
         }
 
         function searchBooks() {
-            const query = document.getElementById("searchBox").value.toLowerCase();
-            const filteredBooks = books.filter(book => book.title.toLowerCase().includes(query));
+            const query = document.getElementById("searchBox").value.toLowerCase().split(" ");
+            const selectedCategory = document.getElementById("categorySelect").value;
+            const filteredBooks = books.filter(book => {
+                const bookData = `${book.title} ${book.author} ${book.edition} ${book.category}`.toLowerCase();
+                const matchesQuery = query.every(term => bookData.includes(term));
+                const matchesCategory = selectedCategory === "" || book.category === selectedCategory;
+                return matchesQuery && matchesCategory;
+            });
             displayBooks(filteredBooks);
         }
+
+        displayBooks(books);
     </script>
 </body>
 </html>
