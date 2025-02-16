@@ -203,7 +203,12 @@
             displayBooks(filteredBooks);
         }
 
-        displayBooks(books);
+        function shuffleBooks(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+displayBooks(shuffleBooks(books));
+
     </script>
 </body>
 </html>
