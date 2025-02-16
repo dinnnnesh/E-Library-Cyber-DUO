@@ -16,12 +16,12 @@ const books = [
         "image": "https://i.ytimg.com/vi/DNCAL1GqOvM/hq720.jpg"
     },
     {
-        "title": "Basics of Python",
+        "title": "Python basics notes",
         "author": "Hans Fangohr",
         "edition": "2nd",
         "category": "Python",
         "url": "https://www.freebookcentre.net/programming-books-download/gotoweb.php?id=11228",
-        "image": "https://dokumen.pub/img/200x200/an-introduction-to-python-for-computational-science-and-engineering.jpg"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO1MyxpDf0Hx5_KGD0gkzQeFuznTJr98iwwg&s"
     },
     {
         "title": "Introduction to Programming Using Java",
