@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    overflow: hidden;
 }
 
 h2 {
@@ -14,8 +15,10 @@ h2 {
 
 #loading-screen {
     position: fixed;
-    width: 100%;
+    top: 0;
+    left: 0;
     height: 100vh;
+    width: 100%;
     background: linear-gradient(to right, #ffffff, #d1ecf1);
     display: flex;
     flex-direction: column;
