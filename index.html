@@ -7,22 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>📚 E-Library for Students (SRCAS)</h2>
-    <input type="text" id="searchBox" placeholder="Search by title, author, or edition..." onkeyup="searchBooks()">
-    <select id="categorySelect" onchange="searchBooks()">
-        <option value="">All Categories</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Cloud Computing">Cloud Computing</option>
-        <option value="C">C</option>
-        <option value="C++">C++</option>
-        <option value="HTML">HTML</option>
-        <option value="CSS">CSS</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="History">History</option>
-        <option value="Physics">Physics</option>
-    </select>
-    <div id="bookList"></div>
+
+    <div id="loading-screen">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Sri_Ramakrishna_College_of_Arts_and_Science.svg/1200px-Sri_Ramakrishna_College_of_Arts_and_Science.svg.png" alt="SRCAS Logo">
+        <div class="loader"></div>
+
+    </div>
+
+    <div id="main-content" class="hidden">
+        <h2>📚 E-Library for Students (SRCAS)</h2>
+        <input type="text" id="searchBox" placeholder="Search by title, author, or edition..." onkeyup="searchBooks()">
+        <select id="categorySelect" onchange="searchBooks()">
+            <option value="">All Categories</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="History">History</option>
+            <option value="Physics">Physics</option>
+        </select>
+        <div id="bookList"></div>
+    </div>
     
     <script src="script.js"></script>
 </body>
