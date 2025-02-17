@@ -1,9 +1,86 @@
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
-        document.getElementById("loading-screen").style.display = "none";  
-        document.getElementById("main-content").classList.remove("hidden"); 
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("login-screen").classList.remove("hidden"); // Show login screen after loading
     }, 3000);
 });
+
+function authenticateUser() {
+    const users = {
+        "23129001@srcas.ac.in": "23129001",
+        "23129002@srcas.ac.in": "23129002",
+        "23129003@srcas.ac.in": "23129003",
+        "23129004@srcas.ac.in": "23129004",
+        "23129005@srcas.ac.in": "23129005",
+        "23129006@srcas.ac.in": "23129006",
+        "23129007@srcas.ac.in": "23129007",
+        "23129008@srcas.ac.in": "23129008",
+        "23129009@srcas.ac.in": "23129009",
+        "23129010@srcas.ac.in": "23129010",
+        "23129011@srcas.ac.in": "23129011",
+        "23129012@srcas.ac.in": "23129012",
+        "23129013@srcas.ac.in": "23129013",
+        "23129014@srcas.ac.in": "23129014",
+        "23129015@srcas.ac.in": "23129015",
+        "23129016@srcas.ac.in": "23129016",
+        "23129017@srcas.ac.in": "23129017",
+        "23129018@srcas.ac.in": "23129018",
+        "23129019@srcas.ac.in": "23129019",
+        "23129020@srcas.ac.in": "23129020",
+        "23129021@srcas.ac.in": "23129021",
+        "23129022@srcas.ac.in": "23129022",
+        "23129023@srcas.ac.in": "23129023",
+        "23129024@srcas.ac.in": "23129024",
+        "23129025@srcas.ac.in": "23129025",
+        "23129026@srcas.ac.in": "23129026",
+        "23129027@srcas.ac.in": "23129027",
+        "23129028@srcas.ac.in": "23129028",
+        "23129029@srcas.ac.in": "23129029",
+        "23129030@srcas.ac.in": "23129030",
+        "23129031@srcas.ac.in": "23129031",
+        "23129032@srcas.ac.in": "23129032",
+        "23129033@srcas.ac.in": "23129033",
+        "23129034@srcas.ac.in": "23129034",
+        "23129035@srcas.ac.in": "23129035",
+        "23129036@srcas.ac.in": "23129036",
+        "23129037@srcas.ac.in": "23129037",
+        "23129038@srcas.ac.in": "23129038",
+        "23129039@srcas.ac.in": "23129039",
+        "23129040@srcas.ac.in": "23129040",
+        "23129041@srcas.ac.in": "23129041",
+        "23129042@srcas.ac.in": "23129042",
+        "23129043@srcas.ac.in": "23129043",
+        "23129044@srcas.ac.in": "23129044",
+        "23129045@srcas.ac.in": "23129045",
+        "23129046@srcas.ac.in": "23129046",
+        "23129047@srcas.ac.in": "23129047",
+        "23129048@srcas.ac.in": "23129048",
+        "23129049@srcas.ac.in": "23129049",
+        "23129050@srcas.ac.in": "23129050",
+        "23129051@srcas.ac.in": "23129051",
+        "23129052@srcas.ac.in": "23129052",
+        "23129053@srcas.ac.in": "23129053",
+        "23129054@srcas.ac.in": "23129054",
+        "23129055@srcas.ac.in": "23129055",
+        "23129056@srcas.ac.in": "23129056",
+        "23129057@srcas.ac.in": "23129057",
+        "23129058@srcas.ac.in": "23129058",
+        "23129059@srcas.ac.in": "23129059",
+        "23129060@srcas.ac.in": "23129060",
+    };
+    
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if (users[email] && users[email] === password) {
+        document.getElementById("login-screen").style.display = "none";
+        document.getElementById("main-content").classList.remove("hidden");
+    } else {
+        document.getElementById("error-message").innerText = "Invalid credentials!";
+    }
+}
+
 
 
 const books = [
