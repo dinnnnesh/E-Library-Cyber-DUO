@@ -6,7 +6,10 @@ body {
     padding: 0;
     color: #333;
 }
-
+#logo{
+    height: 40px;
+    width: 40px;
+}
 h2 {
     margin-top: 20px;
     color: #0056b3;
