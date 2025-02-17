@@ -276,6 +276,103 @@ const books = [
         "url": "https://publications.iowa.gov/27598/1/World%20History%201930.pdf",
         "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR6s7lkJ38eFInm6Y4-YDr2xpRpbv1ZDpsqGgM9eN-_-UP7v9Qk"
     },
+    {
+        "title": "Python Tips",
+        "author": "Muhammad Yasoob Ullah Khalid",
+        "edition": "1st",
+        "category": "Programming",
+        "url": "https://book.pythontips.com/_/downloads/en/latest/pdf/",
+        "image": "https://yasoob.me/wp-content/uploads/2015/08/cover.png"
+    },
+    {
+        "title": "OBJECT-ORIENTED PYTHON",
+        "author": "IRV KALB",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://matematika-mipa.unsri.ac.id/wp-content/uploads/2022/05/Object-Oriented-Python-Master-OOP-by-Building-Games-and-GUIs-Irv-Kalb-z-lib.org_.pdf",
+        "image": "https://m.media-amazon.com/images/I/81PGT1MdwUL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "Python Tricks The Book",
+        "author": "Dan Bader",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://static.realpython.com/python-tricks-book/Python%20Tricks%20Sample.pdf",
+        "image": "https://m.media-amazon.com/images/I/815VmQScW4L._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "Fun Python",
+        "author": "Rada Mihalcea",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://web.eecs.umich.edu/~mihalcea/urls/FunPython.pdf",
+        "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcJUdoxsZuHVu_J-ztbH36vrVvvFKGv6_KEPhkNvl3jCHofNWG"
+    },
+    {
+        "title": "A SmarterWay to Learn Python",
+        "author": "Mark Myers",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://digtvbg.com/files/books-for-hacking/A%20Smarter%20Way%20to%20Learn%20Python%20-%20Learn%20it%20faster.%20Remember%20it%20longer.%20by%20Mark%20Myers.pdf",
+        "image": "https://m.media-amazon.com/images/I/61vWVpKbx8L._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "PYTHON WORKBOOK",
+        "author": "Author",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://mpbou.edu.in/uploads/files/Python_Workbook_Learn_How_to_Quickly_and_Effectively_Program_with_Exercises,_Projects,_and_Solutions_(Programming_Languages_Academy)_(1).pdf",
+        "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQlgtZPEK9OZEO-KBE61HtdVtd_NgEI4gNa3H-h9RV1KfpAna9-"
+    },
+    {
+        "title": "Python Small Projects",
+        "author": "AL SWEIGART",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://edu.anarcho-copy.org/Programming%20Languages/Python/BigBookSmallPythonProjects.pdf",
+        "image": "https://m.media-amazon.com/images/I/71Qp645PuKL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "PYTHON PLAYGROUND",
+        "author": "MAHESH VENKITACHAL AM",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://www.kea.nu/files/textbooks/humblepy/pythonplayground_geekyprojectsforthecuriousprogrammer.pdf",
+        "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1444635675i/22978167.jpg"
+    },
+    {
+        "title": "Python Beyond The Basics",
+        "author": "AL SWEIGART",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://cdn.ttgtmedia.com/rms/pdf/ebook_NoStarch_BeyondtheBasicStuffwithPython.pdf",
+        "image": "https://m.media-amazon.com/images/I/71PAmeWNLJL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "Real World Python",
+        "author": "LEE VAUGHAN",
+        "edition": "none",
+        "category": "Programming",
+        "url": "https://library.kre.dp.ua/Books/2-4%20kurs/%D0%9C%D0%BE%D0%B2%D0%B8%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F/Python/Real_World_Python_A_Hacker%27s_Guide_to_Solving_Problems_with_Code_2021.pdf",
+        "image": "https://m.media-amazon.com/images/I/71HrQyqRf2L._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "Python Data Science Essentials",
+        "author": "Alberto Boschetti and Luca Massaron",
+        "edition": "3rd",
+        "category": "Programming",
+        "url": "https://aaronyeo.org/books_/Data_Science/Python/Python%20Data%20Science%20Essentials.pdf",
+        "image": "https://m.media-amazon.com/images/I/71ogWa4hR-L._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "title": "Python for Data Analysis",
+        "author": "Wes McKinney",
+        "edition": "2nd",
+        "category": "Programming",
+        "url": "https://nibmehub.com/opac-service/pdf/read/Python%20for%20Data%20Analysis%20_%20data%20wrangling%20with%20Pandas-%20NumPy-%20and%20IPython.pdf",
+        "image": "https://m.media-amazon.com/images/I/912I2EtdCbL._AC_UF1000,1000_QL80_.jpg"
+    },
+
 
 
 
