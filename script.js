@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";  
+        document.getElementById("main-content").classList.remove("hidden"); 
+    }, 3000);
+});
+
+
 const books = [
             {
         "title": "Introduction to Python",
